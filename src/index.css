@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 270 50% 98%;
+    --foreground: 270 50% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 270 50% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 270 50% 10%;
+
+    /* Light Purple Theme */
+    --primary: 265 80% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 265 50% 95%;
+    --secondary-foreground: 265 60% 30%;
+
+    --muted: 265 20% 96%;
+    --muted-foreground: 265 20% 46%;
+
+    --accent: 265 50% 95%;
+    --accent-foreground: 265 60% 30%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 265 20% 90%;
+    --input: 265 20% 90%;
+    --ring: 265 80% 60%;
+
+    --radius: 0.5rem;
+
+    /* Custom Mayon Colors */
+    --mayo-primary: 265 80% 60%;
+    --mayo-primary-light: 265 50% 95%;
+    --mayo-primary-dark: 265 90% 40%;
+    --mayo-secondary: 25 95% 53%;
+    --mayo-blue: 217 91% 60%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(265, 80%, 60%), hsl(270, 70%, 50%));
+    --gradient-hero: linear-gradient(135deg, hsl(265, 50%, 98%), hsl(0, 0%, 100%));
+
+    /* Shadows */
+    --shadow-card: 0 4px 20px -2px hsl(265 50% 20% / 0.05);
+    --shadow-elevated: 0 10px 40px -10px hsl(265 50% 10% / 0.1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80;
+  }
+
+  .glass-effect {
+    @apply backdrop-blur-md bg-background/80;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+}
