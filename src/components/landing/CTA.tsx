@@ -4,7 +4,7 @@ import { ArrowRight, Phone } from "lucide-react";
 
 const CTA = () => {
   return (
-    <section className="py-16 md:py-24 bg-primary relative overflow-hidden">
+    <section className="py-10 md:py-14 bg-primary relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSA2MCAwIEwgMCAwIDAgNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')]" />
@@ -16,14 +16,14 @@ const CTA = () => {
             Ready to File Your Taxes?
           </h2>
           <p className="text-lg md:text-xl text-primary-foreground/90 mb-8">
-            Join 50,000+ happy customers and experience hassle-free tax filing today. 
+            Join 50,000+ happy customers and experience hassle-free tax filing today.
             Get started in less than 5 minutes!
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              size="lg" 
-              variant="secondary" 
+            <Button
+              size="lg"
+              variant="secondary"
               className="text-base px-8 gap-2 bg-background text-primary hover:bg-background/90"
               asChild
             >
@@ -32,8 +32,8 @@ const CTA = () => {
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
-            <a 
-              href="tel:9150166247" 
+            <a
+              href="tel:9150166247"
               className="flex items-center gap-2 text-primary-foreground hover:text-primary-foreground/80 transition-colors"
             >
               <Phone className="h-5 w-5" />

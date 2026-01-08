@@ -26,7 +26,7 @@ export function AuthModal({ defaultTab = "login", children }: AuthModalProps) {
             <DialogContent className="sm:max-w-[425px]">
                 <DialogHeader>
                     <DialogTitle className="text-2xl font-bold text-center text-primary">
-                        Welcome to Mayon
+                        Welcome to MyTaxMate
                     </DialogTitle>
                     <DialogDescription className="text-center">
                         Manage your taxes efficiently with our expert tools.

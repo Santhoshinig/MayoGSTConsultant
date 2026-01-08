@@ -7,7 +7,7 @@ const Testimonials = () => {
     {
       name: "Rajesh Kumar",
       role: "Software Engineer, Bangalore",
-      content: "Filing my ITR was so easy with Mayo Consultant. Got my refund in just 15 days! The support team was very helpful.",
+      content: "Filing my ITR was so easy with MyTaxMate. Got my refund in just 15 days! The support team was very helpful.",
       rating: 5,
       avatar: "RK",
     },
@@ -21,7 +21,7 @@ const Testimonials = () => {
     {
       name: "Amit Patel",
       role: "CA, Ahmedabad",
-      content: "Mayo CRM has transformed how I manage my clients. The free plan has everything I need. Thank you!",
+      content: "MyTaxMate CRM has transformed how I manage my clients. The free plan has everything I need. Thank you!",
       rating: 5,
       avatar: "AP",
     },
@@ -49,28 +49,28 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-muted/30">
+    <section className="py-10 md:py-14 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <Badge variant="outline" className="mb-4">Testimonials</Badge>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Loved by <span className="text-primary">50,000+</span> Customers
+          <Badge variant="outline" className="mb-4 border-primary/20 text-primary bg-primary/5 px-4 py-1">Testimonials</Badge>
+          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-primary to-purple-600 drop-shadow-sm pb-2 mb-4">
+            Loved by 50,000+ Customers
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-muted-foreground leading-relaxed">
             Don't just take our word for it. Here's what our customers have to say.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
-            <Card 
+            <Card
               key={testimonial.name}
               className="bg-card border-border hover:shadow-lg transition-all duration-300"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <CardContent className="p-6">
                 <Quote className="h-8 w-8 text-primary/20 mb-4" />
-                
+
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   "{testimonial.content}"
                 </p>

@@ -10,8 +10,12 @@ const PageLayout = ({ title, children }: PageProps) => {
     return (
         <div className="min-h-screen bg-background flex flex-col">
             <Navbar />
-            <main className="flex-grow container mx-auto px-4 py-8 pt-24">
-                <h1 className="text-3xl font-bold mb-6 text-foreground">{title}</h1>
+            <main className="flex-grow pt-16">
+                {title && (
+                    <div className="container mx-auto px-4 mb-6">
+                        <h1 className="text-3xl font-bold text-foreground">{title}</h1>
+                    </div>
+                )}
                 <div className="prose max-w-none">
                     {children}
                 </div>

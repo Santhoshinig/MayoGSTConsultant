@@ -6,21 +6,20 @@ const Footer = () => {
     { name: "Income Tax Filing", href: "/services/itr" },
     { name: "GST Filing", href: "/services/gst" },
     { name: "Expert Assisted", href: "/services/expert" },
-    { name: "Mayo CRM", href: "/crm" },
+    { name: "CRM", href: "/crm" },
   ];
 
   const tools = [
     { name: "Tax Calculator", href: "/tools/tax-calculator" },
     { name: "HRA Calculator", href: "/tools/hra-calculator" },
     { name: "Regime Comparison", href: "/tools/regime-comparison" },
-    { name: "EMI Calculator", href: "/tools/emi-calculator" },
+
   ];
 
   const company = [
     { name: "About Us", href: "/about" },
     { name: "Pricing", href: "/pricing" },
-    { name: "Blog", href: "/blog" },
-    { name: "Contact", href: "/contact" },
+
   ];
 
   const legal = [
@@ -37,27 +36,24 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-3 lg:col-span-2">
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-xl">
-                M
-              </div>
+              <img src="/logo.png" alt="MyTaxMate" className="h-10 w-10 object-contain" />
               <div>
-                <span className="text-xl font-bold text-background">The Mayo</span>
-                <span className="text-xl font-medium text-primary"> Consultant</span>
+                <span className="text-xl font-bold text-background">MyTaxMate</span>
               </div>
             </Link>
             <p className="text-background/70 mb-6 max-w-sm">
               Your trusted partner for tax filing and financial compliance. Making taxes simple, secure, and affordable.
             </p>
-            
+
             {/* Contact Info */}
             <div className="space-y-3">
               <a href="tel:9150166247" className="flex items-center gap-3 text-background/80 hover:text-primary transition-colors">
                 <Phone className="h-5 w-5" />
                 <span className="font-medium">9150166247</span>
               </a>
-              <a href="mailto:info@mayoconsultant.com" className="flex items-center gap-3 text-background/80 hover:text-primary transition-colors">
+              <a href="mailto:info@mytaxmate.com" className="flex items-center gap-3 text-background/80 hover:text-primary transition-colors">
                 <Mail className="h-5 w-5" />
-                <span>info@mayoconsultant.com</span>
+                <span>info@mytaxmate.com</span>
               </a>
               <div className="flex items-start gap-3 text-background/80">
                 <MapPin className="h-5 w-5 mt-1" />
@@ -129,9 +125,9 @@ const Footer = () => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-background/60">
-              © {new Date().getFullYear()} The Mayo Consultant. All rights reserved.
+              © {new Date().getFullYear()} MyTaxMate. All rights reserved.
             </p>
-            
+
             {/* Social Links */}
             <div className="flex items-center gap-4">
               <a href="#" className="text-background/60 hover:text-primary transition-colors">

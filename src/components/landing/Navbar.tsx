@@ -17,7 +17,7 @@ const Navbar = () => {
     { name: "Income Tax Filing", href: "/services/itr" },
     { name: "GST Filing", href: "/services/gst" },
     { name: "Expert Assisted", href: "/services/expert" },
-    { name: "Mayo CRM", href: "/crm" },
+    { name: "CRM", href: "/crm" },
   ];
 
   const tools = [
@@ -32,12 +32,9 @@ const Navbar = () => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-lg">
-              M
-            </div>
+            <img src="/logo.png" alt="MyTaxMate" className="h-9 w-9 object-contain" />
             <div className="hidden sm:block">
-              <span className="text-xl font-extrabold text-foreground tracking-tight">Mayon</span>
-              <span className="text-xl font-medium text-primary ml-1">Consulting</span>
+              <span className="text-xl font-extrabold text-foreground tracking-tight">MyTaxMate</span>
             </div>
           </Link>
 

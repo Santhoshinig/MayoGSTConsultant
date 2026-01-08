@@ -1,9 +1,9 @@
 import { Badge } from "@/components/ui/badge";
-import { 
-  Shield, 
-  Zap, 
-  Clock, 
-  HeadphonesIcon, 
+import {
+  Shield,
+  Zap,
+  Clock,
+  HeadphonesIcon,
   Calculator,
   FileCheck,
   TrendingUp,
@@ -55,21 +55,21 @@ const Features = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-background">
+    <section className="pt-4 pb-14 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <Badge variant="outline" className="mb-4">Why Choose Us</Badge>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            The <span className="text-primary">Smart Way</span> to File Taxes
+          <Badge variant="outline" className="mb-4 border-primary/20 text-primary bg-primary/5 px-4 py-1">Why Choose Us</Badge>
+          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-primary to-purple-600 drop-shadow-sm pb-2 mb-4">
+            The Smart Way to File Taxes
           </h2>
-          <p className="text-lg text-muted-foreground">
-            Join thousands of satisfied customers who trust The Mayo Consultant for their tax needs.
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            Join thousands of satisfied customers who trust MyTaxMate for their tax needs.
           </p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
-            <div 
+            <div
               key={feature.title}
               className="group p-6 rounded-xl bg-card border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300"
               style={{ animationDelay: `${index * 50}ms` }}

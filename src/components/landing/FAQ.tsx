@@ -25,7 +25,7 @@ const FAQ = () => {
       answer: "The Old Regime offers various deductions (80C, 80D, HRA, etc.) but has higher tax rates. The New Regime has lower tax rates but no deductions. Our calculator helps you choose the one that saves you more tax.",
     },
     {
-      question: "Is my data safe with The Mayo Consultant?",
+      question: "Is my data safe with MyTaxMate?",
       answer: "Absolutely! We use bank-grade 256-bit SSL encryption to protect your data. We are fully compliant with government regulations and never share your personal information with third parties.",
     },
     {
@@ -33,8 +33,8 @@ const FAQ = () => {
       answer: "GST filing is mandatory for businesses with annual turnover exceeding ₹40 lakhs (₹20 lakhs for services). It includes filing GSTR-1 (outward supplies), GSTR-3B (monthly summary), and annual returns.",
     },
     {
-      question: "How does Mayo CRM help tax consultants?",
-      answer: "Mayo CRM is a free tool that helps CAs and tax consultants manage client data, track filing deadlines, store documents securely, and send automated reminders. It's designed specifically for tax professionals.",
+      question: "How does MyTaxMate CRM help tax consultants?",
+      answer: "MyTaxMate CRM is a free tool that helps CAs and tax consultants manage client data, track filing deadlines, store documents securely, and send automated reminders. It's designed specifically for tax professionals.",
     },
     {
       question: "Can I file ITR myself or do I need an expert?",
@@ -43,14 +43,14 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-background">
+    <section className="py-10 md:py-14 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <Badge variant="outline" className="mb-4">FAQ</Badge>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Frequently Asked <span className="text-primary">Questions</span>
+          <Badge variant="outline" className="mb-4 border-primary/20 text-primary bg-primary/5 px-4 py-1">FAQ</Badge>
+          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-primary to-purple-600 drop-shadow-sm pb-2 mb-4">
+            Frequently Asked Questions
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-muted-foreground leading-relaxed">
             Find answers to common questions about tax filing and our services.
           </p>
         </div>
@@ -58,8 +58,8 @@ const FAQ = () => {
         <div className="max-w-3xl mx-auto">
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
-              <AccordionItem 
-                key={index} 
+              <AccordionItem
+                key={index}
                 value={`item-${index}`}
                 className="bg-card border border-border rounded-lg px-6 data-[state=open]:border-primary/50"
               >

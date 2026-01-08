@@ -6,65 +6,52 @@ import { AuthModal } from "@/components/AuthModal";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-secondary/50 via-background to-background">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSA2MCAwIEwgMCAwIDAgNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgwLDAsMCwwLjAzKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-50" />
-
-      <div className="container mx-auto px-4 pt-24 md:pt-32 pb-24 md:pb-32 relative min-h-screen flex items-center">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+    <section className="relative overflow-hidden bg-background">
+      <div className="container mx-auto px-4 pt-20 md:pt-32 pb-10 relative min-h-[90vh] flex flex-col justify-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-6 md:space-y-8 text-center lg:text-left z-10 order-2 lg:order-1 animate-fade-in">
-            <Badge variant="secondary" className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium border-primary/20 bg-primary/10 text-primary-foreground animate-scale-in">
-              <span className="relative flex h-2 w-2">
-                <span className="inline-flex h-full w-full rounded-full bg-primary opacity-75 animate-ping"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-              </span>
-              ₹1766.69 Cr Refund processed this year
-            </Badge>
+          <div className="space-y-6 lg:order-1 fade-in-up z-10">
 
-            <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground leading-tight animate-slide-in-right">
-                Get Maximum <span className="text-primary">Tax Refund</span> Without the Stress
+            <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm text-sm font-semibold text-foreground border border-border">
+              <span className="text-green-600 font-bold">₹1766.69 Cr</span> Refund processed this year
+            </div>
+
+            <div className="space-y-2 fade-in-up delay-100">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-foreground leading-[1.1] tracking-tight">
+                Hire a <span className="text-foreground">Tax Expert</span>
               </h1>
-              <p className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 animate-fade-in delay-100">
-                Trusted by thousands of professionals for accurate, timely, and secure tax filing. We handle everything from GST to Income Tax Returns, so you can focus on growing your business.
-              </p>
 
-              <div className="flex flex-wrap gap-3 justify-center lg:justify-start animate-fade-in delay-200">
-                <div className="flex items-center gap-2 text-sm text-foreground/80 bg-background/50 px-3 py-1 rounded-full border border-border">
-                  <ShieldCheck className="w-4 h-4 text-primary" /> 100% Secure
-                </div>
-                <div className="flex items-center gap-2 text-sm text-foreground/80 bg-background/50 px-3 py-1 rounded-full border border-border">
-                  <TrendingUp className="w-4 h-4 text-primary" /> Tax Optimized
-                </div>
-              </div>
             </div>
 
             {/* CTA Boxes */}
-            <div className="grid md:grid-cols-2 gap-4 md:gap-6 mt-8">
+            <div className="grid sm:grid-cols-2 gap-6 mt-6 max-w-2xl fade-in-up delay-200">
               {/* Box 1: GST Filing */}
-              <div className="bg-card rounded-2xl p-6 shadow-lg border border-border hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-left group animate-scale-in delay-300">
-                <div className="mb-4">
-                  <img src="https://cdn-icons-png.flaticon.com/512/2910/2910791.png" alt="GST" className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform duration-300" />
-                  <h3 className="text-xl font-bold text-foreground mb-1">GST filing</h3>
-                  <p className="text-muted-foreground text-sm">start @199*</p>
+              <div className="bg-white rounded-3xl p-6 shadow-card border border-transparent hover:border-primary/20 transition-all duration-300 hover:shadow-lg text-left h-full flex flex-col justify-between">
+                <div>
+                  <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mb-4 animate-float">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2910/2910791.png" alt="GST" className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground mb-1">GST Filing</h3>
+                  <p className="text-muted-foreground font-medium">Starts @ ₹199*</p>
                 </div>
                 <AuthModal defaultTab="signup">
-                  <Button className="w-full text-base font-semibold bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300 hover:scale-[1.02]">
-                    File Now
+                  <Button className="w-full mt-6 bg-primary hover:bg-primary/90 text-white font-bold h-12 rounded-xl text-base">
+                    Hire Now
                   </Button>
                 </AuthModal>
               </div>
 
               {/* Box 2: CRM */}
-              <div className="bg-card rounded-2xl p-6 shadow-lg border border-border hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-left group animate-scale-in delay-400">
-                <div className="mb-4">
-                  <img src="https://cdn-icons-png.flaticon.com/512/3135/3135679.png" alt="CRM" className="w-12 h-12 mb-3 group-hover:scale-110 transition-transform duration-300" />
+              <div className="bg-white rounded-3xl p-6 shadow-card border border-transparent hover:border-primary/20 transition-all duration-300 hover:shadow-lg text-left h-full flex flex-col justify-between">
+                <div>
+                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 animate-float delay-500">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135679.png" alt="CRM" className="w-6 h-6" />
+                  </div>
                   <h3 className="text-xl font-bold text-foreground mb-1">Free Mayo CRM</h3>
-                  <p className="text-muted-foreground text-sm">for the registered users</p>
+                  <p className="text-muted-foreground font-medium">For registered users</p>
                 </div>
                 <AuthModal defaultTab="signup">
-                  <Button className="w-full text-base font-semibold bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300 hover:scale-[1.02]">
+                  <Button className="w-full mt-6 bg-primary hover:bg-primary/90 text-white font-bold h-12 rounded-xl text-base">
                     Book Now
                   </Button>
                 </AuthModal>
@@ -79,7 +66,7 @@ const Hero = () => {
               <img
                 src="/hero-girl.jpg"
                 alt="Happy Customer"
-                className="object-cover w-full h-auto rounded-b-full rounded-t-full shadow-2xl border-4 border-white/50 transition-transform duration-500 hover:scale-[1.01]"
+                className="object-cover w-full h-auto rounded-3xl shadow-2xl transition-transform duration-500 hover:scale-[1.01]"
               />
 
               {/* Floating Refund Card */}
@@ -94,6 +81,42 @@ const Hero = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        {/* Trust Bar / Stats Footer */}
+        <div className="mt-16 md:mt-20 border-t border-border pt-8 animate-fade-in delay-300">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 items-center text-center md:text-left">
+
+            {/* Live Filing Status */}
+            <div className="md:col-span-1 space-y-2">
+              <p className="text-sm text-muted-foreground font-medium">We are now live for ITR filing on</p>
+              <div className="flex justify-center md:justify-start gap-4 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                <img src="https://cdn-icons-png.flaticon.com/512/906/906377.png" alt="Teams" className="h-6 w-6" />
+                <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="WhatsApp" className="h-6 w-6" />
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111615.png" alt="Slack" className="h-6 w-6" />
+              </div>
+            </div>
+
+            {/* Stat 1 */}
+            <div className="flex flex-col items-center md:items-start">
+              <div className="flex items-center gap-1">
+                <span className="text-2xl font-bold text-foreground">★ 4.9/5</span>
+              </div>
+              <p className="text-sm text-muted-foreground">45K+ Reviews</p>
+            </div>
+
+            {/* Stat 2 */}
+            <div className="flex flex-col items-center md:items-start">
+              <span className="text-2xl font-bold text-foreground">₹1,050 Cr+</span>
+              <p className="text-sm text-muted-foreground">Refunds delivered last year</p>
+            </div>
+
+            {/* Stat 3 */}
+            <div className="flex flex-col items-center md:items-start">
+              <span className="text-2xl font-bold text-foreground">7.5 M+</span>
+              <p className="text-sm text-muted-foreground">Users Trust Us</p>
+            </div>
+
           </div>
         </div>
       </div>

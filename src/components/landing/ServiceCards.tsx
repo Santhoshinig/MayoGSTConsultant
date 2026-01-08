@@ -11,7 +11,7 @@ const ServiceCards = () => {
       title: "GST Filing",
       description: "Complete GST return filing made simple. GSTR-1, GSTR-3B & more.",
       price: "₹199",
-      priceLabel: "Starting at",
+      priceLabel: "Starts @",
       badge: "Most Popular",
       badgeVariant: "default" as const,
       href: "/services/gst",
@@ -34,7 +34,7 @@ const ServiceCards = () => {
       title: "Income Tax Filing",
       description: "Self-file your ITR with our easy step-by-step process.",
       price: "₹499",
-      priceLabel: "Starting at",
+      priceLabel: "Starts @",
       badge: null,
       badgeVariant: "default" as const,
       href: "/services/itr",
@@ -44,8 +44,8 @@ const ServiceCards = () => {
       icon: Users,
       title: "Expert Assisted",
       description: "Get personalized help from our certified tax experts.",
-      price: "₹999",
-      priceLabel: "Starting at",
+      price: "₹499",
+      priceLabel: "Starts @",
       badge: "Premium",
       badgeVariant: "outline" as const,
       href: "/services/expert",
@@ -54,15 +54,14 @@ const ServiceCards = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-muted/30">
+    <section className="pt-8 pb-4 md:pt-12 md:pb-6 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <Badge variant="outline" className="mb-4">Our Services</Badge>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Everything You Need for{" "}
-            <span className="text-primary">Tax Compliance</span>
+          <Badge variant="outline" className="mb-4 border-primary/20 text-primary bg-primary/5 px-4 py-1">Our Services</Badge>
+          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-primary to-purple-600 drop-shadow-sm pb-2 mb-4">
+            Everything You Need for Tax Compliance
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-muted-foreground leading-relaxed">
             From GST filing to complete tax planning, we've got you covered with affordable and reliable services.
           </p>
         </div>
@@ -71,13 +70,15 @@ const ServiceCards = () => {
           {services.map((service, index) => (
             <Card
               key={service.title}
-              className={`relative overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ${
-                service.highlight 
-                  ? "border-primary bg-gradient-to-br from-primary/5 to-primary/10" 
-                  : "border-border"
-              }`}
+              className={`group relative overflow-hidden transition-all duration-500 hover:shadow-elevated hover:-translate-y-2 border-border/50 ${service.highlight ? "ring-2 ring-primary/20" : ""}`}
               style={{ animationDelay: `${index * 100}ms` }}
             >
+              <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${service.title.includes("GST") ? "from-blue-400 to-blue-600" :
+                  service.title.includes("CRM") ? "from-primary to-purple-600" :
+                    service.title.includes("Income") ? "from-orange-400 to-orange-600" :
+                      "from-green-400 to-green-600"
+                }`} />
+
               {service.badge && (
                 <div className="absolute top-4 right-4">
                   <Badge variant={service.badgeVariant} className={service.highlight ? "bg-primary text-primary-foreground" : ""}>
@@ -88,11 +89,10 @@ const ServiceCards = () => {
               )}
 
               <CardHeader className="pb-4">
-                <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 ${
-                  service.highlight 
-                    ? "bg-primary text-primary-foreground" 
-                    : "bg-primary/10 text-primary"
-                }`}>
+                <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 ${service.highlight
+                  ? "bg-primary text-primary-foreground"
+                  : "bg-primary/10 text-primary"
+                  }`}>
                   <service.icon className="h-6 w-6" />
                 </div>
                 <CardTitle className="text-xl">{service.title}</CardTitle>
@@ -102,12 +102,12 @@ const ServiceCards = () => {
               <CardContent className="space-y-4">
                 <div className="flex items-baseline gap-1">
                   {service.priceLabel && (
-                    <span className="text-sm text-muted-foreground">{service.priceLabel}</span>
+                    <span className="text-sm text-muted-foreground font-medium">{service.priceLabel}</span>
                   )}
-                  <span className={`text-3xl font-bold ${service.highlight ? "text-primary" : "text-foreground"}`}>
+                  <span className={`text-4xl font-black tracking-tight ${service.highlight ? "text-primary" : "text-foreground"}`}>
                     {service.price}
                   </span>
-                  {service.price !== "FREE" && <span className="text-muted-foreground">*</span>}
+                  {service.price !== "FREE" && <span className="text-lg font-bold text-muted-foreground">*</span>}
                 </div>
 
                 <ul className="space-y-2">
@@ -119,8 +119,8 @@ const ServiceCards = () => {
                   ))}
                 </ul>
 
-                <Button 
-                  className="w-full mt-4 gap-2" 
+                <Button
+                  className="w-full mt-4 gap-2"
                   variant={service.highlight ? "default" : "outline"}
                   asChild
                 >
